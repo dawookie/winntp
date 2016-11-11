@@ -3,9 +3,7 @@ class winntp (
   $ntp_server               = 'north-america.pool.ntp.org,time.windows.com',
   $max_pos_phase_correction = '0xFFFFFFFF', # unlimited
   $max_neg_phase_correction = '0xFFFFFFFF') {
-    
-  include 'registry'
-
+ 
   service { 'w32time':
     enable  => true,
     ensure  => 'running',
